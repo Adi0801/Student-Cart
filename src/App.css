@@ -7,6 +7,31 @@
   pointer-events: none;
 }
 
+/* Header style */
+.header {
+  background-color: orange;
+  height: 100px;
+}
+.cart-div {
+  float: right;
+  margin: 30px;
+  position: relative;
+}
+.cart-div img {
+  width: 30px;
+}
+
+.cart-div span {
+  background-color: green;
+  border-radius: 100px;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  color: white;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -26,6 +51,79 @@
 
 .App-link {
   color: #61dafb;
+}
+
+/* Product UI Style */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items */
+}
+
+.product-item {
+  border: 1px solid white;
+  padding: 20px;
+  margin: 20px;
+  flex: 1 1 200px; /* Ensures the items grow and shrink as needed */
+  max-width: 300px; /* Maximum width for each product item */
+  box-sizing: border-box; /* Ensures padding and border are included in width/height calculation */
+  text-align: center; /* Optional: centers the content inside each product item */
+}
+
+.product-item img {
+  width: 100%; /* Make the image take up the full width of its parent container */
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  display: block; /* Prevents images from having extra space below them */
+}
+
+.logo {
+  float: left;
+  margin: 0%;
+  padding: 20px;
+}
+
+.cart-page-container {
+  display: flex;
+  margin-left: 30px; /* Fixed typo '30ox' to '30px' */
+  margin-right: 30px;
+  justify-content: space-between; /* Ensures both sides are spaced out */
+}
+
+.cart-page-container table {
+  flex: 65%; /* Takes up 65% of the available width */
+  border-collapse: collapse; /* Ensures the borders collapse together */
+  width: 100%; /* Make sure the table takes up full available width */
+}
+
+.cart-page-container table td {
+  border: 1px solid white;
+  padding: 15px;
+  text-align: left; /* Align the text to the left in table cells */
+}
+
+.price-details {
+  flex: 35%; /* Takes up 35% of the available width */
+  margin: 0px 30px;
+}
+
+.price-details .adjust-price {
+  display: flex;
+  justify-content: space-between; /* Space out the spans for better visual balance */
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+
+.price-details .adjust-price span {
+  font-size: 20px;
+  font-weight: bold; /* Make the text bold for better readability */
+}
+
+.search-box {
+  float: left;
+  width: 60%;
+  padding: 25px;
 }
 
 @keyframes App-logo-spin {
